@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: ESP32 从 0 到 1
-  text: 把一个想法，变成会感知、会控制、会联网的小设备
+  text: 把一个想法变成会感知、会控制、会联网的小设备
   tagline: 不先讲芯片手册，先用按钮、灯光、传感器和 Wi-Fi，让你看见 ESP32 到底能做什么。
   image:
     src: /official/espressif-logo.svg
