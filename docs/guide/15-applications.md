@@ -1,6 +1,15 @@
+<script setup>
+import { withBase } from 'vitepress'
+</script>
+
 # 应用案例
 
 学完外设、RTOS、AI 提示词和 ESP-Claw 后，再开始做应用。应用不是把所有功能堆在一起，而是把一个可演示目标拆成能验收的小里程碑。
+
+<figure class="doc-figure">
+  <img :src="withBase('/generated/application-scenes.png')" alt="ESP32 应用场景总览图">
+  <figcaption>应用项目通常是多个独立外设的组合：输入、控制、通信、存储和网络各自跑通后，再用任务和消息把它们连接起来。</figcaption>
+</figure>
 
 ## 案例一：串口控制的多路 PWM 调光器
 

@@ -20,7 +20,7 @@ features:
   - title: 从能跑开始
     details: 先装好 ESP-IDF，再完成 Hello World、串口监视、GPIO 点灯，不把初学者卡在抽象概念里。
   - title: 把外设讲成模型
-    details: GPIO、LEDC、I2C、ADC、UART、Wi-Fi 分章讲解，每个实验先独立跑通。
+    details: GPIO、LEDC、I2C、ADC、UART、Touch、Wi-Fi 分章讲解，每个实验先独立跑通。
   - title: RTOS 不再神秘
     details: 从任务、队列、互斥和定时器出发，建立嵌入式并发的直觉。
   - title: AI 时代的学习方法

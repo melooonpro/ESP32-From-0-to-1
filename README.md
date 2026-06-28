@@ -1,6 +1,6 @@
 # ESP32 从 0 到 1
 
-这是一个面向无经验大学生的中文网页版教程，以 ESP32 和 ESP-IDF 为主线，从 Windows 环境搭建、Hello World、基础外设、FreeRTOS，到 AI 时代的提示词协作和 ESP-Claw 应用方向。
+这是一个面向无经验大学生的中文网页版教程，以 ESP32 和 ESP-IDF 为主线，从 Windows 环境搭建、Hello World、基础外设、Touch、FreeRTOS，到 AI 时代的提示词协作和 ESP-Claw 应用方向。
 
 ## 本地预览
 

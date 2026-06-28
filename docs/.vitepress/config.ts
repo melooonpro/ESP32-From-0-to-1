@@ -35,13 +35,14 @@ export default defineConfig({
           { text: 'I2C 总线扫描', link: '/guide/05-i2c' },
           { text: 'ADC 模拟采样', link: '/guide/06-adc' },
           { text: 'UART 串口通信', link: '/guide/07-uart' },
-          { text: 'Wi-Fi 与 HTTP', link: '/guide/08-wifi-http' },
-          { text: 'NVS 配置保存', link: '/guide/09-nvs' },
-          { text: 'OTA 固件升级', link: '/guide/10-ota' },
-          { text: 'FreeRTOS 深入理解', link: '/guide/11-freertos' },
-          { text: 'AI 提示词工作流', link: '/guide/12-ai-prompts' },
-          { text: '特殊章：ESP-Claw', link: '/guide/13-esp-claw' },
-          { text: '应用案例', link: '/guide/14-applications' }
+          { text: 'Touch 触摸感应', link: '/guide/08-touch' },
+          { text: 'Wi-Fi 与 HTTP', link: '/guide/09-wifi-http' },
+          { text: 'NVS 配置保存', link: '/guide/10-nvs' },
+          { text: 'OTA 固件升级', link: '/guide/11-ota' },
+          { text: 'FreeRTOS 深入理解', link: '/guide/12-freertos' },
+          { text: 'AI 提示词工作流', link: '/guide/13-ai-prompts' },
+          { text: '特殊章：ESP-Claw', link: '/guide/14-esp-claw' },
+          { text: '应用案例', link: '/guide/15-applications' }
         ]
       },
       {

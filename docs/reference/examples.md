@@ -22,6 +22,7 @@ idf.py build flash monitor
 | `examples/i2c_scanner` | 扫描 I2C 设备地址 | I2C 总线扫描 |
 | `examples/adc_oneshot` | 读取 ADC 原始值 | ADC 模拟采样 |
 | `examples/uart_echo` | UART1 串口回显 | UART 串口通信 |
+| `examples/touch_read` | 读取触摸通道原始值 | Touch 触摸感应 |
 | `examples/freertos_queue` | 用队列连接按键任务和 LED 任务 | FreeRTOS 深入理解 |
 | `examples/nvs_counter` | 用 NVS 保存启动次数 | NVS 配置保存 |
 | `examples/wifi_station_http` | 连接 Wi-Fi 并发起 HTTP GET | Wi-Fi 与 HTTP |

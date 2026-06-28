@@ -15,7 +15,7 @@
   </div>
   <div class="lesson-card">
     <h3>基础外设</h3>
-    <p>按 GPIO、LEDC、I2C、ADC、UART、Wi-Fi 的顺序逐个实验，每个外设先独立跑通，再考虑组合。</p>
+    <p>按 GPIO、LEDC、I2C、ADC、UART、Touch、Wi-Fi 的顺序逐个实验，每个外设先独立跑通，再考虑组合。</p>
   </div>
   <div class="lesson-card">
     <h3>RTOS 与应用</h3>
@@ -25,7 +25,7 @@
 
 ## 推荐学习节奏
 
-第一周只追求“能跑”：安装环境、烧录 Hello World、看懂串口输出。第二周开始逐个外设实验：GPIO、LEDC、I2C、ADC、UART。第三周进入 Wi-Fi、HTTP、NVS 和 OTA，让设备具备联网、保存配置和升级能力。第四周再系统学习 FreeRTOS，因为这时你已经见过“为什么需要多个任务”。
+第一周只追求“能跑”：安装环境、烧录 Hello World、看懂串口输出。第二周开始逐个外设实验：GPIO、LEDC、I2C、ADC、UART、Touch。第三周进入 Wi-Fi、HTTP、NVS 和 OTA，让设备具备联网、保存配置和升级能力。第四周再系统学习 FreeRTOS，因为这时你已经见过“为什么需要多个任务”。
 
 ::: warning 不要一开始就追求大项目
 初学者最常见的挫败感不是“不会”，而是同时处理太多未知：硬件接线、驱动 API、CMake、RTOS、网络、云平台。每章只增加一两个新概念，才是最快的路线。

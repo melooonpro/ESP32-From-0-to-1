@@ -79,6 +79,27 @@
   margin: 20px 0;
 }
 
+.doc-figure {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  background: var(--vp-c-bg);
+  margin: 22px 0;
+  padding: 14px;
+}
+
+.doc-figure img {
+  display: block;
+  width: 100%;
+  border-radius: 6px;
+}
+
+.doc-figure figcaption {
+  margin-top: 10px;
+  color: var(--vp-c-text-2);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
 .lesson-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));

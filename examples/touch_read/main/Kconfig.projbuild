@@ -1,0 +1,11 @@
+menu "Touch read example"
+
+    config TOUCH_CHANNEL_ID
+        int "Touch channel ID"
+        default 1
+        help
+            Touch channel ID used by this example. For ESP32-S3, check the
+            ESP-IDF touch sensor documentation and your board schematic before
+            connecting an external touch pad.
+
+endmenu
