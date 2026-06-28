@@ -7,8 +7,8 @@ import { withBase } from 'vitepress'
 GPIO 是最适合入门的外设：它只表达两种状态，高电平或低电平。输出时，你让 LED 亮灭；输入时，你读取按键是否被按下。
 
 <figure class="doc-figure">
-  <img :src="withBase('/generated/gpio-modes.png')" alt="GPIO 输出、输入、开漏和中断事件示意图">
-  <figcaption>GPIO 不是只有“点灯”一种用法。常见逻辑可以分成推挽输出、输入上拉/下拉、开漏共享线和边沿事件。先分清角色，再写代码。</figcaption>
+  <img :src="withBase('/generated/gpio-capability-overview.png')" alt="GPIO 能力总览示意图">
+  <figcaption>GPIO 是芯片和外部世界之间的通用引脚层：它既能做数字输入/输出，也能配合内部上下拉、开漏结构、中断事件和外设矩阵，把一个物理引脚变成不同功能入口。</figcaption>
 </figure>
 
 ## 直觉
@@ -17,11 +17,39 @@ GPIO 是最适合入门的外设：它只表达两种状态，高电平或低电
 
 ## GPIO 的几种角色
 
+### 推挽输出
+
+<figure class="doc-figure">
+  <img :src="withBase('/generated/gpio-push-pull-output.png')" alt="GPIO 推挽输出示意图">
+  <figcaption>推挽输出由上拉驱动和下拉驱动共同决定电平：输出高电平时接近 3.3 V，输出低电平时接近 GND，适合控制 LED、片选信号、使能脚等低功率开关信号。</figcaption>
+</figure>
+
 推挽输出适合直接控制 LED、片选信号、使能脚这类简单开关。输出高电平时接近 3.3 V，输出低电平时接近 GND，但它不能给电机、继电器、灯带这类大负载直接供电。
+
+### 输入与上下拉
+
+<figure class="doc-figure">
+  <img :src="withBase('/generated/gpio-input-pull.png')" alt="GPIO 输入上拉和下拉示意图">
+  <figcaption>输入模式只负责观察电平。上拉/下拉电阻给引脚一个默认状态，按键或外部模块再把它拉到相反电平，程序才能稳定判断“没有动作”和“发生动作”。</figcaption>
+</figure>
 
 输入模式适合读取按键、限位开关、模块的状态脚。输入脚不能悬空，必须通过外部电阻或内部上拉/下拉让它在“没人按、没人驱动”时也有确定电平。
 
+### 开漏共享线
+
+<figure class="doc-figure">
+  <img :src="withBase('/generated/gpio-open-drain.png')" alt="GPIO 开漏共享线示意图">
+  <figcaption>开漏输出不会主动输出高电平，只能把总线拉低；总线回到高电平依靠上拉电阻。它适合多个器件共享一根线，并避免多个器件同时强推高低电平造成冲突。</figcaption>
+</figure>
+
 开漏输出不会主动拉高，只负责把总线拉低，拉高依靠上拉电阻。它适合多个器件共享一根线的场景，例如告警线、线与逻辑，I2C 的 SDA/SCL 也属于类似思想。
+
+### 边沿中断事件
+
+<figure class="doc-figure">
+  <img :src="withBase('/generated/gpio-interrupt-event.png')" alt="GPIO 边沿中断和事件队列示意图">
+  <figcaption>中断把外部电平变化变成事件。中断服务程序只做快速记录或发队列，真正的日志、网络、状态机处理放到任务里完成，系统才不会被长回调拖住。</figcaption>
+</figure>
 
 中断输入适合捕捉边沿事件，例如按键按下、传感器触发、脉冲计数。中断回调里只做很短的事情，例如发队列消息，不要在里面打印大量日志、访问网络或做长计算。
 
