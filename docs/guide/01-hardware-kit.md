@@ -1,0 +1,54 @@
+# 开发板与实验箱
+
+对初学者来说，硬件选择越稳定，学习体验越顺。教程默认使用 ESP32-S3 开发板，优先推荐资料多、USB 下载方便、引脚标注清晰的开发板，例如 ESP32-S3-DevKitC-1。
+
+## 先认识“芯片”和“开发板”
+
+ESP32-S3 是芯片，开发板是把芯片、电源、USB 转串口、晶振、按键、排针等电路做好之后的学习载体。你写的程序运行在芯片上，但你接线、供电和烧录通常都通过开发板完成。
+
+这也是为什么同样是 ESP32-S3，不同开发板的 LED 引脚、按键引脚、USB 接口和外设连接可能不同。教程例程尽量把引脚放进 `menuconfig`，让你按实际开发板修改。
+
+<div class="prompt-card">
+<strong>本节提示词</strong>
+
+我手里有一块 ESP32-S3 开发板。请根据我贴出的开发板购买链接或引脚图，帮我识别芯片型号、USB 接口、可用 LED、BOOT/RESET 按键、I2C 推荐引脚和注意事项。
+</div>
+
+## 建议实验箱清单
+
+第一阶段只需要开发板、USB 数据线、面包板、杜邦线、LED、限流电阻、按键。第二阶段再加入 I2C OLED 或温湿度传感器、可调电位器、USB-TTL 模块。第三阶段可以加入舵机、蜂鸣器、继电器模块和电池供电模块。
+
+不要一次把所有模块都接上。每次只接一个新外设，先跑最小 demo，再组合成小系统。这样能把问题定位在最近改动里。
+
+<div class="prompt-card">
+<strong>本节提示词</strong>
+
+请为 4 周 ESP32-S3 入门课程设计一套低成本实验箱。要求分为必备、推荐、进阶三档，并说明每个元器件对应哪个实验。
+</div>
+
+## 接线安全
+
+ESP32-S3 的 GPIO 通常是 3.3 V 逻辑，不能随意接 5 V 信号。外接 LED 要串联限流电阻；继电器、舵机、电机这类负载不要直接由 GPIO 供电；模块供电前先确认 VCC 和 GND。
+
+如果你不确定接线是否安全，先画出连接表：ESP32-S3 引脚、模块引脚、电源电压、信号方向。把表发给老师或 AI 检查，胜过盲目上电。
+
+<div class="prompt-card">
+<strong>本节提示词</strong>
+
+请检查下面的 ESP32-S3 接线表是否安全。重点看 3.3 V/5 V 电平、GND 是否共地、LED 是否有限流电阻、舵机/继电器是否需要独立供电。
+</div>
+
+## 记录你的硬件档案
+
+建议在学习仓库里保存一个 `board-notes.md`，记录你的开发板型号、购买链接、USB 串口芯片、常用引脚、已验证外设和踩坑记录。长期看，这比临时问“我的 LED 是哪个引脚”更可靠。
+
+<div class="prompt-card">
+<strong>本节提示词</strong>
+
+请根据我贴出的开发板信息生成一份 `board-notes.md` 模板，包含开发板照片说明、芯片型号、串口号、LED/按键引脚、I2C/SPI/UART 备用引脚和已验证 demo。
+</div>
+
+## 官方资料
+
+- [ESP32-S3-DevKitC-1 入门指南](https://docs.espressif.com/projects/esp-dev-kits/zh_CN/latest/esp32s3/esp32-s3-devkitc-1/user_guide.html)
+- [ESP32-S3 技术参考手册](https://www.espressif.com/sites/default/files/documentation/esp32-s3_technical_reference_manual_cn.pdf)

@@ -1,0 +1,10 @@
+menu "ADC oneshot demo"
+
+config ADC_CHANNEL
+    int "ADC1 channel number"
+    default 0
+    range 0 9
+    help
+        Select ADC1 channel. Check your board pinout before wiring.
+
+endmenu

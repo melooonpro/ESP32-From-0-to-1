@@ -22,6 +22,7 @@ export default defineConfig({
         text: '从 0 到 1',
         items: [
           { text: '学习地图', link: '/guide/00-learning-map' },
+          { text: '开发板与实验箱', link: '/guide/01-hardware-kit' },
           { text: 'Windows 环境搭建', link: '/guide/01-windows-setup' },
           { text: '第一个 Hello World', link: '/guide/02-hello-world' },
           { text: 'GPIO 与 LEDC', link: '/guide/03-gpio-ledc' },
@@ -30,7 +31,9 @@ export default defineConfig({
           { text: 'FreeRTOS 深入理解', link: '/guide/06-freertos' },
           { text: 'AI 提示词工作流', link: '/guide/07-ai-prompts' },
           { text: '特殊章：ESP-Claw', link: '/guide/08-esp-claw' },
-          { text: '新方向与应用实例', link: '/guide/09-next-directions' }
+          { text: 'ADC 与 UART', link: '/guide/09-adc-uart' },
+          { text: 'NVS、OTA 与工程化', link: '/guide/10-nvs-ota' },
+          { text: '新方向与应用实例', link: '/guide/11-next-directions' }
         ]
       },
       {

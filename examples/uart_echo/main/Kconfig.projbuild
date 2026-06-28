@@ -1,0 +1,15 @@
+menu "UART echo demo"
+
+config UART_TX_GPIO
+    int "UART TX GPIO number"
+    default 17
+
+config UART_RX_GPIO
+    int "UART RX GPIO number"
+    default 18
+
+config UART_BAUD_RATE
+    int "UART baud rate"
+    default 115200
+
+endmenu
