@@ -26,6 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       pages_enabled: ${{ steps.pages.outputs.enabled }}
+      site_base: ${{ steps.pages.outputs.site_base }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -45,15 +46,23 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          status=$(curl -L -s -o /dev/null -w "%{http_code}" \
+          response=$(mktemp)
+          status=$(curl -L -s -o "$response" -w "%{http_code}" \
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer ${GH_TOKEN}" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
             "${{ github.api_url }}/repos/${{ github.repository }}/pages")
           if [ "$status" = "200" ]; then
             echo "enabled=true" >> "$GITHUB_OUTPUT"
+            custom_domain=$(node -e "const fs = require('fs'); const pages = JSON.parse(fs.readFileSync(process.argv[1], 'utf8')); console.log(pages.cname || '')" "$response")
+            if [ -n "$custom_domain" ]; then
+              echo "site_base=/" >> "$GITHUB_OUTPUT"
+            else
+              echo "site_base=/${{ github.event.repository.name }}/" >> "$GITHUB_OUTPUT"
+            fi
           else
             echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "site_base=/${{ github.event.repository.name }}/" >> "$GITHUB_OUTPUT"
             echo "GitHub Pages is not enabled yet. Enable Settings > Pages > Source: GitHub Actions to deploy."
           fi
 
@@ -64,7 +73,7 @@ jobs:
       - name: Build VitePress site
         run: npm run docs:build
         env:
-          VITEPRESS_BASE: /ESP32-From-0-to-1/
+          VITEPRESS_BASE: ${{ steps.pages.outputs.site_base }}
 
       - name: Upload Pages artifact
         if: steps.pages.outputs.enabled == 'true'
