@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: ESP32 从 0 到 1
-  text: 从 Windows 环境到应用案例
+  text: 从环境部署到应用案例
   tagline: 面向无经验大学生的中文教程，用书本式节奏把 ESP-IDF、独立外设实验、RTOS、AI 提示词和 ESP-Claw 串起来。
   image:
     src: /official/espressif-logo.svg
