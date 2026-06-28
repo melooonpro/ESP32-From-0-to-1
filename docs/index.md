@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: ESP32 从 0 到 1
-  text: 从环境部署到应用案例
-  tagline: 面向无经验大学生的中文教程，用书本式节奏把 ESP-IDF、独立外设实验、RTOS、AI 提示词和 ESP-Claw 串起来。
+  text: 把一个想法，变成会感知、会控制、会联网的小设备
+  tagline: 不先讲芯片手册，先用按钮、灯光、传感器和 Wi-Fi，让你看见 ESP32 到底能做什么。
   image:
     src: /official/espressif-logo.svg
     alt: Espressif
@@ -17,14 +17,14 @@ hero:
       link: /reference/examples
 
 features:
-  - title: 从能跑开始
-    details: 先装好 ESP-IDF，再完成 Hello World、串口监视、GPIO 点灯，不把初学者卡在抽象概念里。
-  - title: 把外设讲成模型
-    details: GPIO、LEDC、I2C、ADC、UART、Touch、Wi-Fi 分章讲解，每个实验先独立跑通。
-  - title: RTOS 不再神秘
-    details: 从任务、队列、互斥和定时器出发，建立嵌入式并发的直觉。
-  - title: AI 时代的学习方法
-    details: 每章末尾给出一份综合提示词，训练“让 AI 帮你生成、解释、验证 demo”的能力。
+  - title: ESP32 是什么
+    details: 一块能接按钮、灯、传感器和网络的小板子。它让软件不只停在屏幕里，而是能碰到真实世界。
+  - title: 先看见结果
+    details: 每章先做一个能观察的现象：灯亮、按键触发、旋钮变数值、联网拿到响应，再解释背后的名字。
+  - title: 从零件到作品
+    details: 把输入、控制、通信、保存和升级一步步拼起来，最后变成一个能演示、能复盘的小应用。
+  - title: AI 帮你少卡住
+    details: 每章给一段可直接复制的提示词，让 AI 帮你检查接线、解释报错、扩展 demo，但不替你蒙混过关。
 ---
 
 <script setup>
@@ -33,8 +33,8 @@ import { withBase } from 'vitepress'
 
 <div class="hero-board">
   <div>
-    <h2>这不是一页速查表，而是一条学习路径</h2>
-    <p>本教程默认你是第一次接触嵌入式：不知道串口是什么、不熟悉 CMake、不确定芯片和开发板的关系，都没关系。每章会先建立直觉，再写最小可运行代码，最后用提示词把本章知识变成可继续探索的 demo。</p>
+    <h2>先记住一句话</h2>
+    <p>ESP32 就是把“我想做一个会自动感知和反应的东西”变成现实的起点。你可以从一颗 LED 开始，慢慢做出会读传感器、会连 Wi-Fi、会保存设置、会被 AI 调用的小设备。</p>
   </div>
   <img :src="withBase('/official/esp-claw-logo.jpg')" alt="ESP-Claw 官方标识">
 </div>

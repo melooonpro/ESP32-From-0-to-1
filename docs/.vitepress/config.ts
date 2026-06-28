@@ -5,7 +5,7 @@ const normalizedBase = base.endsWith('/') ? base : `${base}/`
 const publicAsset = (asset: string) => `${normalizedBase}${asset.replace(/^\//, '')}`
 const siteUrl = (process.env.VITEPRESS_SITE_URL ?? 'https://melooon.top').replace(/\/$/, '')
 const siteTitle = 'ESP32 从 0 到 1'
-const siteDescription = '面向大学生的 ESP32、ESP-IDF、FreeRTOS 与 ESP-Claw 中文教程'
+const siteDescription = '把一个想法，变成会感知、会控制、会联网的小设备。'
 const sitePreviewImage = `${siteUrl}/official/espressif-preview.png`
 
 export default defineConfig({

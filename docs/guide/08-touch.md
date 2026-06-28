@@ -4,7 +4,9 @@ import { withBase } from 'vitepress'
 
 # Touch 触摸感应
 
-Touch 外设读取的不是“按下/松开”的机械状态，而是触摸电极附近的电容变化。它适合做无机械磨损的按键、滑条、触摸唤醒和防水面板。
+这一章让 ESP32 不用机械按钮，也能感觉到“有人摸了一下”。
+
+Touch 外设读取的不是“按下/松开”的机械状态，而是触摸电极附近的电容变化。它适合做无机械磨损的按键、滑条、触摸唤醒和防水面板。你可以把它理解成最简版的触摸交互。
 
 <figure class="doc-figure">
   <img :src="withBase('/generated/touch-principle.png')" alt="ESP32 Touch 电容触摸原理示意图">

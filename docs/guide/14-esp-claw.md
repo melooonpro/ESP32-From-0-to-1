@@ -4,6 +4,8 @@ import { withBase } from 'vitepress'
 
 # 特殊章：ESP-Claw
 
+这一章可以先用一句话理解：让 AI 或上层程序不只是聊天，而是真的能调用设备能力。
+
 ESP-Claw 是乐鑫面向边缘智能体和设备能力编排方向的开源项目。本章不要求你一上来读完整源码，而是先理解它把“设备、能力、脚本、事件、模型服务”组织在一起的方式。
 
 <img :src="withBase('/official/esp-claw-logo.jpg')" alt="ESP-Claw 官方标识" style="max-width: 360px; width: 100%; border-radius: 8px;">

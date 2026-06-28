@@ -4,7 +4,9 @@ import { withBase } from 'vitepress'
 
 # GPIO 数字输入输出
 
-GPIO 是最适合入门的外设：它只表达两种状态，高电平或低电平。输出时，你让 LED 亮灭；输入时，你读取按键是否被按下。
+这一章让 ESP32 学会最基础的“看”和“动”：看按钮有没有被按下，动手把灯打开或关掉。
+
+GPIO 是最适合入门的外设：它只表达两种状态，高电平或低电平。输出时，你让 LED 亮灭；输入时，你读取按键是否被按下。很多看起来复杂的设备，第一步其实都是从一个输入和一个输出开始。
 
 <figure class="doc-figure">
   <img :src="withBase('/generated/gpio-capability-overview.png')" alt="GPIO 能力总览示意图">
