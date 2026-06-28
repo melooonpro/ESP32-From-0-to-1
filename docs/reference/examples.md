@@ -17,13 +17,13 @@ idf.py build flash monitor
 | 目录 | 目标 | 对应章节 |
 | --- | --- | --- |
 | `examples/hello_world` | 验证编译、烧录、串口日志 | 第一个 Hello World |
-| `examples/gpio_button_led` | 按键切换 LED | GPIO 与 LEDC |
-| `examples/ledc_fade` | PWM 呼吸灯 | GPIO 与 LEDC |
-| `examples/i2c_scanner` | 扫描 I2C 设备地址 | I2C 与传感器 |
-| `examples/adc_oneshot` | 读取 ADC 原始值 | ADC 与 UART |
-| `examples/uart_echo` | UART1 串口回显 | ADC 与 UART |
+| `examples/gpio_button_led` | 按键切换 LED | GPIO 数字输入输出 |
+| `examples/ledc_fade` | PWM 呼吸灯 | LEDC PWM 输出 |
+| `examples/i2c_scanner` | 扫描 I2C 设备地址 | I2C 总线扫描 |
+| `examples/adc_oneshot` | 读取 ADC 原始值 | ADC 模拟采样 |
+| `examples/uart_echo` | UART1 串口回显 | UART 串口通信 |
 | `examples/freertos_queue` | 用队列连接按键任务和 LED 任务 | FreeRTOS 深入理解 |
-| `examples/nvs_counter` | 用 NVS 保存启动次数 | NVS、OTA 与工程化 |
+| `examples/nvs_counter` | 用 NVS 保存启动次数 | NVS 配置保存 |
 | `examples/wifi_station_http` | 连接 Wi-Fi 并发起 HTTP GET | Wi-Fi 与 HTTP |
 
 ## 例程风格

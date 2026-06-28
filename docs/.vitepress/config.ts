@@ -30,15 +30,18 @@ export default defineConfig({
           { text: '开发板与实验箱', link: '/guide/01-hardware-kit' },
           { text: 'Windows 环境搭建', link: '/guide/01-windows-setup' },
           { text: '第一个 Hello World', link: '/guide/02-hello-world' },
-          { text: 'GPIO 与 LEDC', link: '/guide/03-gpio-ledc' },
-          { text: 'I2C 与传感器', link: '/guide/04-i2c-sensor' },
-          { text: 'Wi-Fi 与 HTTP', link: '/guide/05-wifi-http' },
-          { text: 'FreeRTOS 深入理解', link: '/guide/06-freertos' },
-          { text: 'AI 提示词工作流', link: '/guide/07-ai-prompts' },
-          { text: '特殊章：ESP-Claw', link: '/guide/08-esp-claw' },
-          { text: 'ADC 与 UART', link: '/guide/09-adc-uart' },
-          { text: 'NVS、OTA 与工程化', link: '/guide/10-nvs-ota' },
-          { text: '新方向与应用实例', link: '/guide/11-next-directions' }
+          { text: 'GPIO 数字输入输出', link: '/guide/03-gpio' },
+          { text: 'LEDC PWM 输出', link: '/guide/04-ledc' },
+          { text: 'I2C 总线扫描', link: '/guide/05-i2c' },
+          { text: 'ADC 模拟采样', link: '/guide/06-adc' },
+          { text: 'UART 串口通信', link: '/guide/07-uart' },
+          { text: 'Wi-Fi 与 HTTP', link: '/guide/08-wifi-http' },
+          { text: 'NVS 配置保存', link: '/guide/09-nvs' },
+          { text: 'OTA 固件升级', link: '/guide/10-ota' },
+          { text: 'FreeRTOS 深入理解', link: '/guide/11-freertos' },
+          { text: 'AI 提示词工作流', link: '/guide/12-ai-prompts' },
+          { text: '特殊章：ESP-Claw', link: '/guide/13-esp-claw' },
+          { text: '应用案例', link: '/guide/14-applications' }
         ]
       },
       {
