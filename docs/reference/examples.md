@@ -30,7 +30,7 @@ idf.py build flash monitor
 这些例程刻意保持短小：少封装、少宏魔法、少业务逻辑。真正上项目时可以再拆组件、做错误恢复、增加测试。
 
 <div class="prompt-card">
-<strong>本节提示词</strong>
+<strong>本页提示词</strong>
 
 请根据 `examples/` 里的工程风格，帮我新增一个 ESP32-S3 ADC 采样 demo。要求保持短小，使用 menuconfig 配置 ADC 通道，并给出教程章节草稿。
 </div>
