@@ -3,20 +3,39 @@ import { defineConfig } from 'vitepress'
 const base = process.env.VITEPRESS_BASE ?? '/'
 const normalizedBase = base.endsWith('/') ? base : `${base}/`
 const publicAsset = (asset: string) => `${normalizedBase}${asset.replace(/^\//, '')}`
+const siteUrl = (process.env.VITEPRESS_SITE_URL ?? 'https://melooon.top').replace(/\/$/, '')
+const siteTitle = 'ESP32 从 0 到 1'
+const siteDescription = '面向大学生的 ESP32、ESP-IDF、FreeRTOS 与 ESP-Claw 中文教程'
+const sitePreviewImage = `${siteUrl}/official/esp-claw-logo.jpg`
 
 export default defineConfig({
   lang: 'zh-CN',
-  title: 'ESP32 从 0 到 1',
-  description: '面向大学生的 ESP32、ESP-IDF、FreeRTOS 与 ESP-Claw 中文教程',
+  title: siteTitle,
+  description: siteDescription,
   base: normalizedBase,
   cleanUrls: true,
   lastUpdated: true,
   head: [
-    ['link', { rel: 'icon', href: publicAsset('/official/espressif-logo.svg') }]
+    ['link', { rel: 'icon', href: publicAsset('/official/espressif-logo.svg') }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:site_name', content: siteTitle }],
+    ['meta', { property: 'og:title', content: siteTitle }],
+    ['meta', { property: 'og:description', content: siteDescription }],
+    ['meta', { property: 'og:url', content: siteUrl }],
+    ['meta', { property: 'og:image', content: sitePreviewImage }],
+    ['meta', { property: 'og:image:secure_url', content: sitePreviewImage }],
+    ['meta', { property: 'og:image:type', content: 'image/jpeg' }],
+    ['meta', { property: 'og:image:width', content: '1816' }],
+    ['meta', { property: 'og:image:height', content: '825' }],
+    ['meta', { property: 'og:image:alt', content: 'ESP-Claw logo' }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:title', content: siteTitle }],
+    ['meta', { name: 'twitter:description', content: siteDescription }],
+    ['meta', { name: 'twitter:image', content: sitePreviewImage }]
   ],
   themeConfig: {
     logo: '/official/espressif-logo.svg',
-    siteTitle: 'ESP32 从 0 到 1',
+    siteTitle,
     nav: [
       { text: '开始学习', link: '/guide/00-learning-map' },
       { text: '示例工程', link: '/reference/examples' },
