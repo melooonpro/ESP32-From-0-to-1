@@ -4,8 +4,8 @@
 
 ## ESP-IDF
 
-- [ESP-IDF 编程指南 ESP32-S3](https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32s3/index.html)
-- [ESP32-S3 快速入门](https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32s3/get-started/index.html)
+- [ESP-IDF 编程指南](https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32s3/index.html)
+- [ESP-IDF 快速入门](https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32s3/get-started/index.html)
 - [ESP-IDF 示例仓库目录](https://github.com/espressif/esp-idf/tree/master/examples)
 - [GPIO API](https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32s3/api-reference/peripherals/gpio.html)
 - [LEDC API](https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32s3/api-reference/peripherals/ledc.html)
@@ -16,7 +16,7 @@
 - [FreeRTOS 文档](https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32s3/api-reference/system/freertos_idf.html)
 - [NVS Flash API](https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32s3/api-reference/storage/nvs_flash.html)
 - [OTA API](https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32s3/api-reference/system/ota.html)
-- [ESP32-S3-DevKitC-1 入门指南](https://docs.espressif.com/projects/esp-dev-kits/zh_CN/latest/esp32s3/esp32-s3-devkitc-1/user_guide.html)
+- [开发板入门指南](https://docs.espressif.com/projects/esp-dev-kits/zh_CN/latest/esp32s3/esp32-s3-devkitc-1/user_guide.html)
 
 ## ESP-Claw
 

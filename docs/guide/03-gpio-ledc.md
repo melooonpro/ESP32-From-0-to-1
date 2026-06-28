@@ -40,5 +40,5 @@ ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0);
 <div class="prompt-card">
 <strong>本章提示词</strong>
 
-请帮我设计一个 ESP32-S3 GPIO 与 LEDC 综合 demo：按键短按切换 LED，长按切换呼吸灯速度。请先说明硬件接线、输入上拉、消抖、PWM 频率和占空比，再给出 ESP-IDF 实现思路。
+请帮我设计一个 ESP32 GPIO 与 LEDC 综合 demo：按键短按切换 LED，长按切换呼吸灯速度。请先说明硬件接线、输入上拉、消抖、PWM 频率和占空比，再给出 ESP-IDF 实现思路。
 </div>

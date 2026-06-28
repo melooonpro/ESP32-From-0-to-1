@@ -1,8 +1,8 @@
 # 术语表
 
-## ESP32-S3
+## ESP32
 
-乐鑫的一款 Wi-Fi + Bluetooth LE SoC，常用于 IoT、HMI、音频、边缘 AI 等场景。本教程以 ESP32-S3-DevKitC-1 这类开发板为默认对象。
+乐鑫的一系列 SoC，常用于 IoT、HMI、音频、边缘 AI 等场景。不同型号的外设、内存和无线能力会有差异，写代码前要确认目标芯片。
 
 ## ESP-IDF
 
@@ -10,7 +10,7 @@ Espressif IoT Development Framework，乐鑫官方开发框架。它包含驱动
 
 ## SoC
 
-System on Chip，片上系统。ESP32-S3 不只是一个 CPU，还集成了无线、内存控制器、外设控制器等模块。
+System on Chip，片上系统。ESP32 芯片不只是一个 CPU，还集成了无线、内存控制器、外设控制器等模块。
 
 ## GPIO
 

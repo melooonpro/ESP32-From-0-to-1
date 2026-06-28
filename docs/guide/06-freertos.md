@@ -46,5 +46,5 @@ typedef struct {
 <div class="prompt-card">
 <strong>本章提示词</strong>
 
-请帮我把一个 ESP32-S3 外设 demo 改造成 FreeRTOS 结构：说明任务划分、优先级、栈大小、队列消息、互斥锁使用场景和阻塞风险，并给出如何用串口日志验证任务之间的数据流。
+请帮我把一个 ESP32 外设 demo 改造成 FreeRTOS 结构：说明任务划分、优先级、栈大小、队列消息、互斥锁使用场景和阻塞风险，并给出如何用串口日志验证任务之间的数据流。
 </div>

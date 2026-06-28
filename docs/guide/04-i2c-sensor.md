@@ -39,5 +39,5 @@ i2c_master_bus_config_t bus_config = {
 <div class="prompt-card">
 <strong>本章提示词</strong>
 
-我想用 ESP32-S3 学习 I2C 传感器。请先帮我做 I2C 地址扫描和接线排查，再根据我提供的数据手册寄存器表，提取初始化流程、读数流程、错误处理和最小 ESP-IDF demo。
+我想用 ESP32 学习 I2C 传感器。请先帮我做 I2C 地址扫描和接线排查，再根据我提供的数据手册寄存器表，提取初始化流程、读数流程、错误处理和最小 ESP-IDF demo。
 </div>

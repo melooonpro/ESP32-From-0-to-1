@@ -1,17 +1,22 @@
 import { defineConfig } from 'vitepress'
 
+const base = process.env.VITEPRESS_BASE ?? '/'
+const normalizedBase = base.endsWith('/') ? base : `${base}/`
+const publicAsset = (asset: string) => `${normalizedBase}${asset.replace(/^\//, '')}`
+
 export default defineConfig({
   lang: 'zh-CN',
-  title: 'ESP32-S3 从 0 到 1',
-  description: '面向大学生的 ESP32-S3、ESP-IDF、FreeRTOS 与 ESP-Claw 中文教程',
+  title: 'ESP32 从 0 到 1',
+  description: '面向大学生的 ESP32、ESP-IDF、FreeRTOS 与 ESP-Claw 中文教程',
+  base: normalizedBase,
   cleanUrls: true,
   lastUpdated: true,
   head: [
-    ['link', { rel: 'icon', href: '/official/espressif-logo.svg' }]
+    ['link', { rel: 'icon', href: publicAsset('/official/espressif-logo.svg') }]
   ],
   themeConfig: {
     logo: '/official/espressif-logo.svg',
-    siteTitle: 'ESP32-S3 从 0 到 1',
+    siteTitle: 'ESP32 从 0 到 1',
     nav: [
       { text: '开始学习', link: '/guide/00-learning-map' },
       { text: '示例工程', link: '/reference/examples' },
@@ -50,7 +55,7 @@ export default defineConfig({
     ],
     footer: {
       message: '本教程使用中文编写，代码和命令保留必要英文。',
-      copyright: '持续迭代中的 ESP32-S3 学习资料'
+      copyright: '持续迭代中的 ESP32 学习资料'
     },
     search: {
       provider: 'local'

@@ -5,7 +5,7 @@ AI 不能替代你理解硬件，但能显著降低“从想法到第一个 demo
 ## 一个可复用模板
 
 ```text
-我正在使用 ESP32-S3 和 ESP-IDF，开发环境是 Windows。
+我正在使用 ESP32 和 ESP-IDF，开发环境是 Windows。
 硬件：开发板型号是 ...，外设是 ...，接线是 ...
 目标：我想实现 ...
 约束：请使用 ESP-IDF 官方 API，不要使用 Arduino；敏感信息通过 menuconfig 配置。

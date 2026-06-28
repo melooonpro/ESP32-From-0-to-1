@@ -1,8 +1,12 @@
+<script setup>
+import { withBase } from 'vitepress'
+</script>
+
 # 特殊章：ESP-Claw
 
 ESP-Claw 是乐鑫面向边缘智能体和设备能力编排方向的开源项目。本章不要求你一上来读完整源码，而是先理解它把“设备、能力、脚本、事件、模型服务”组织在一起的方式。
 
-<img src="/official/esp-claw-logo.jpg" alt="ESP-Claw 官方标识" style="max-width: 360px; width: 100%; border-radius: 8px;">
+<img :src="withBase('/official/esp-claw-logo.jpg')" alt="ESP-Claw 官方标识" style="max-width: 360px; width: 100%; border-radius: 8px;">
 
 ## 为什么把 ESP-Claw 放在进阶章
 
@@ -36,7 +40,7 @@ ESP-Claw 参考仓库中可以看到几类重要目录：
 
 当你掌握 GPIO、I2C、Wi-Fi 和 FreeRTOS 后，可以尝试把一个外设能力封装成更高层接口。例如“读取温度”不再只是 I2C 读寄存器，而是一个可以被脚本或智能体调用的能力。
 
-进阶项目可以是：ESP32-S3 读取环境传感器，通过 Wi-Fi 上报状态，再让一个上层 agent 根据规则或提示词决定是否打开风扇。
+进阶项目可以是：ESP32 读取环境传感器，通过 Wi-Fi 上报状态，再让一个上层 agent 根据规则或提示词决定是否打开风扇。
 
 ## 官方资料
 

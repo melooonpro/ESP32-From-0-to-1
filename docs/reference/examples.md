@@ -6,6 +6,7 @@
 
 ```powershell
 cd examples/hello_world
+# 代码示例以 ESP32-S3 为目标芯片
 idf.py set-target esp32s3
 idf.py menuconfig
 idf.py build flash monitor
@@ -32,5 +33,5 @@ idf.py build flash monitor
 <div class="prompt-card">
 <strong>本页提示词</strong>
 
-请根据 `examples/` 里的工程风格，帮我新增一个 ESP32-S3 ADC 采样 demo。要求保持短小，使用 menuconfig 配置 ADC 通道，并给出教程章节草稿。
+请根据 `examples/` 里的工程风格，帮我新增一个 ESP32 ADC 采样 demo。要求保持短小，使用 menuconfig 配置 ADC 通道，并给出教程章节草稿。
 </div>
