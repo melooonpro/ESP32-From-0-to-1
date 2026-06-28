@@ -8,7 +8,10 @@ import { withBase } from 'vitepress'
 
 ESP-Claw 是乐鑫面向边缘智能体和设备能力编排方向的开源项目。本章不要求你一上来读完整源码，而是先理解它把“设备、能力、脚本、事件、模型服务”组织在一起的方式。
 
-<img :src="withBase('/official/esp-claw-logo.jpg')" alt="ESP-Claw 官方标识" style="max-width: 360px; width: 100%; border-radius: 8px;">
+<div class="claw-logo-switch claw-logo-inline" aria-label="ESP-Claw 官方标识">
+  <img class="claw-logo-light" :src="withBase('/official/esp-claw-logo-transparent.png')" alt="ESP-Claw 官方标识">
+  <img class="claw-logo-dark" :src="withBase('/official/esp-claw-logo-transparent-dark.png')" alt="ESP-Claw 官方标识">
+</div>
 
 ## 直觉
 

@@ -141,6 +141,40 @@
   object-fit: contain;
 }
 
+.claw-logo-switch {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.claw-logo-switch img {
+  grid-area: 1 / 1;
+  width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+}
+
+.claw-logo-dark {
+  display: none;
+}
+
+.dark .claw-logo-light {
+  display: none;
+}
+
+.dark .claw-logo-dark {
+  display: block;
+}
+
+.claw-logo-inline {
+  width: min(100%, 360px);
+  margin: 18px 0 8px;
+}
+
+.claw-logo-inline img {
+  max-height: 140px;
+}
+
 @media (max-width: 760px) {
   .hero-board {
     grid-template-columns: 1fr;

@@ -36,5 +36,8 @@ import { withBase } from 'vitepress'
     <h2>先记住一句话</h2>
     <p>ESP32 就是把“我想做一个会自动感知和反应的东西”变成现实的起点。你可以从一颗 LED 开始，慢慢做出会读传感器、会连 Wi-Fi、会保存设置、还能调用 AI 的小设备。</p>
   </div>
-  <img :src="withBase('/official/esp-claw-logo.jpg')" alt="ESP-Claw 官方标识">
+  <div class="claw-logo-switch" aria-label="ESP-Claw 官方标识">
+    <img class="claw-logo-light" :src="withBase('/official/esp-claw-logo-transparent.png')" alt="ESP-Claw 官方标识">
+    <img class="claw-logo-dark" :src="withBase('/official/esp-claw-logo-transparent-dark.png')" alt="ESP-Claw 官方标识">
+  </div>
 </div>
