@@ -1,0 +1,10 @@
+node_modules
+docs/.vitepress/cache
+docs/.vitepress/dist
+managed_components
+build
+sdkconfig
+sdkconfig.old
+dependencies.lock
+.DS_Store
+Thumbs.db

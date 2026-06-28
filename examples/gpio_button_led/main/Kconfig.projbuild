@@ -1,0 +1,15 @@
+menu "GPIO button LED demo"
+
+config LED_GPIO
+    int "LED GPIO number"
+    default 2
+    help
+        Set this to the GPIO connected to your LED.
+
+config BUTTON_GPIO
+    int "Button GPIO number"
+    default 0
+    help
+        Set this to the GPIO connected to your button.
+
+endmenu

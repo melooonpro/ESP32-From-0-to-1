@@ -1,0 +1,11 @@
+menu "FreeRTOS queue demo"
+
+config LED_GPIO
+    int "LED GPIO number"
+    default 2
+
+config BUTTON_GPIO
+    int "Button GPIO number"
+    default 0
+
+endmenu

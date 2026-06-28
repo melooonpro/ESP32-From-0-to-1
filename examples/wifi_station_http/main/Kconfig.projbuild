@@ -1,0 +1,15 @@
+menu "Wi-Fi station HTTP demo"
+
+config WIFI_SSID
+    string "Wi-Fi SSID"
+    default ""
+
+config WIFI_PASSWORD
+    string "Wi-Fi password"
+    default ""
+
+config HTTP_URL
+    string "HTTP URL"
+    default "http://example.com/"
+
+endmenu

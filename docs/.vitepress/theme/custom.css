@@ -1,0 +1,123 @@
+:root {
+  --vp-c-brand-1: #e7352c;
+  --vp-c-brand-2: #d62b24;
+  --vp-c-brand-3: #ff5a4f;
+  --vp-c-brand-soft: rgba(231, 53, 44, 0.12);
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-alt: #f7f8fa;
+  --vp-c-bg-soft: #f2f5f8;
+  --vp-c-text-1: #20242a;
+  --vp-c-text-2: #4b5563;
+  --vp-c-divider: #dfe5ec;
+  --vp-font-family-base: "Inter", "Segoe UI", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  --vp-font-family-mono: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
+}
+
+.dark {
+  --vp-c-brand-1: #ff746b;
+  --vp-c-brand-2: #ff5a4f;
+  --vp-c-brand-3: #e7352c;
+  --vp-c-brand-soft: rgba(255, 116, 107, 0.16);
+  --vp-c-bg: #101318;
+  --vp-c-bg-alt: #171b22;
+  --vp-c-bg-soft: #1e242d;
+  --vp-c-text-1: #f5f7fb;
+  --vp-c-text-2: #c3cad5;
+  --vp-c-divider: #303846;
+}
+
+.VPHome {
+  background:
+    radial-gradient(circle at 12% 16%, rgba(231, 53, 44, 0.12), transparent 28rem),
+    linear-gradient(180deg, #fff 0%, #f7f9fc 100%);
+}
+
+.dark .VPHome {
+  background:
+    radial-gradient(circle at 12% 16%, rgba(255, 116, 107, 0.12), transparent 28rem),
+    linear-gradient(180deg, #101318 0%, #171b22 100%);
+}
+
+.VPHero .name,
+.VPHero .text {
+  letter-spacing: 0;
+}
+
+.VPHero .image-src {
+  width: clamp(160px, 18vw, 240px);
+  max-width: 240px;
+  height: auto;
+}
+
+.VPDoc h2 {
+  border-top: 1px solid var(--vp-c-divider);
+  padding-top: 28px;
+}
+
+.custom-block.tip {
+  border-color: rgba(231, 53, 44, 0.35);
+}
+
+.prompt-card {
+  border: 1px solid var(--vp-c-divider);
+  border-left: 4px solid var(--vp-c-brand-1);
+  border-radius: 8px;
+  background: var(--vp-c-bg-soft);
+  padding: 16px 18px;
+  margin: 20px 0 28px;
+}
+
+.prompt-card strong {
+  color: var(--vp-c-brand-1);
+}
+
+.book-note {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  background: var(--vp-c-bg-alt);
+  padding: 16px 18px;
+  margin: 20px 0;
+}
+
+.lesson-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.lesson-card {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  background: var(--vp-c-bg);
+  padding: 18px;
+}
+
+.lesson-card h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.hero-board {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(240px, 0.8fr);
+  gap: 24px;
+  align-items: center;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  background: var(--vp-c-bg);
+  padding: 24px;
+}
+
+.hero-board img {
+  width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+}
+
+@media (max-width: 760px) {
+  .hero-board {
+    grid-template-columns: 1fr;
+    padding: 18px;
+  }
+}

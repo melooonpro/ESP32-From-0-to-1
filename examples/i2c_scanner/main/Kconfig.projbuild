@@ -1,0 +1,11 @@
+menu "I2C scanner demo"
+
+config I2C_SDA_GPIO
+    int "I2C SDA GPIO number"
+    default 8
+
+config I2C_SCL_GPIO
+    int "I2C SCL GPIO number"
+    default 9
+
+endmenu

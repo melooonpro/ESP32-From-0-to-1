@@ -1,0 +1,7 @@
+menu "LEDC fade demo"
+
+config LEDC_GPIO
+    int "PWM LED GPIO number"
+    default 2
+
+endmenu
