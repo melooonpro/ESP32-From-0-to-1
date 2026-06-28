@@ -6,7 +6,7 @@ const publicAsset = (asset: string) => `${normalizedBase}${asset.replace(/^\//, 
 const siteUrl = (process.env.VITEPRESS_SITE_URL ?? 'https://melooon.top').replace(/\/$/, '')
 const siteTitle = 'ESP32 从 0 到 1'
 const siteDescription = '面向大学生的 ESP32、ESP-IDF、FreeRTOS 与 ESP-Claw 中文教程'
-const sitePreviewImage = `${siteUrl}/official/esp-claw-logo.jpg`
+const sitePreviewImage = `${siteUrl}/official/espressif-preview.png`
 
 export default defineConfig({
   lang: 'zh-CN',
@@ -24,10 +24,10 @@ export default defineConfig({
     ['meta', { property: 'og:url', content: siteUrl }],
     ['meta', { property: 'og:image', content: sitePreviewImage }],
     ['meta', { property: 'og:image:secure_url', content: sitePreviewImage }],
-    ['meta', { property: 'og:image:type', content: 'image/jpeg' }],
-    ['meta', { property: 'og:image:width', content: '1816' }],
-    ['meta', { property: 'og:image:height', content: '825' }],
-    ['meta', { property: 'og:image:alt', content: 'ESP-Claw logo' }],
+    ['meta', { property: 'og:image:type', content: 'image/png' }],
+    ['meta', { property: 'og:image:width', content: '386' }],
+    ['meta', { property: 'og:image:height', content: '376' }],
+    ['meta', { property: 'og:image:alt', content: 'Espressif logo' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:title', content: siteTitle }],
     ['meta', { name: 'twitter:description', content: siteDescription }],
