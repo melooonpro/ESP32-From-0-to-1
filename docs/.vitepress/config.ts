@@ -61,7 +61,8 @@ export default defineConfig({
           { text: 'FreeRTOS 深入理解', link: '/guide/12-freertos' },
           { text: 'AI 提示词工作流', link: '/guide/13-ai-prompts' },
           { text: '特殊章：ESP-Claw', link: '/guide/14-esp-claw' },
-          { text: '应用案例', link: '/guide/15-applications' }
+          { text: '应用案例', link: '/guide/15-applications' },
+          { text: '选型方法', link: '/guide/16-selection' }
         ]
       },
       {
