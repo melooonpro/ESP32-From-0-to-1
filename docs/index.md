@@ -24,7 +24,7 @@ features:
   - title: 从零件到作品
     details: 把输入、控制、通信、保存和升级一步步拼起来，最后变成一个能演示、能复盘的小应用。
   - title: AI 帮你少卡住
-    details: 每章给一段可直接复制的提示词，让 AI 帮你检查接线、解释报错、扩展 demo，但不替你蒙混过关。
+    details: 每章给一段可直接复制的提示词，让 AI 帮你整理需求、定位报错、扩展 demo，把下一步做得更清楚。
 ---
 
 <script setup>
@@ -34,7 +34,7 @@ import { withBase } from 'vitepress'
 <div class="hero-board">
   <div>
     <h2>先记住一句话</h2>
-    <p>ESP32 就是把“我想做一个会自动感知和反应的东西”变成现实的起点。你可以从一颗 LED 开始，慢慢做出会读传感器、会连 Wi-Fi、会保存设置、会被 AI 调用的小设备。</p>
+    <p>ESP32 就是把“我想做一个会自动感知和反应的东西”变成现实的起点。你可以从一颗 LED 开始，慢慢做出会读传感器、会连 Wi-Fi、会保存设置、还能调用 AI 的小设备。</p>
   </div>
   <img :src="withBase('/official/esp-claw-logo.jpg')" alt="ESP-Claw 官方标识">
 </div>
