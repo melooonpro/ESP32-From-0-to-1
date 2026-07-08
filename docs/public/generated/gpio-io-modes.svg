@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1320" viewBox="0 0 1000 1320" role="img" aria-labelledby="title desc">
+  <title id="title">GPIO 输入四类和输出四类模式示意图</title>
+  <desc id="desc">用两列卡片展示浮空输入、上拉输入、下拉输入、模拟输入、通用推挽输出、通用开漏输出、复用推挽输出和复用开漏输出。</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7f8fa; }
+      .panel { fill: #ffffff; stroke: #dfe5ec; stroke-width: 2; }
+      .card { fill: #ffffff; stroke: #dfe5ec; stroke-width: 2; }
+      .soft { fill: #f2f5f8; stroke: #dfe5ec; stroke-width: 2; }
+      .brand { fill: #e7352c; }
+      .brand-soft { fill: #fff1f0; stroke: #e7352c; stroke-width: 2; }
+      .line { fill: none; stroke: #4b5563; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .wire { fill: none; stroke: #e7352c; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { fill: none; stroke: #8a94a6; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+      .dash { fill: none; stroke: #8a94a6; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 8 9; }
+      .title { fill: #20242a; font-family: "Noto Sans SC", "Microsoft YaHei", "Segoe UI", sans-serif; font-size: 38px; font-weight: 700; }
+      .section { fill: #20242a; font-family: "Noto Sans SC", "Microsoft YaHei", "Segoe UI", sans-serif; font-size: 28px; font-weight: 700; }
+      .text { fill: #20242a; font-family: "Noto Sans SC", "Microsoft YaHei", "Segoe UI", sans-serif; font-size: 25px; font-weight: 700; }
+      .small { fill: #4b5563; font-family: "Noto Sans SC", "Microsoft YaHei", "Segoe UI", sans-serif; font-size: 19px; }
+      .tiny { fill: #4b5563; font-family: "Noto Sans SC", "Microsoft YaHei", "Segoe UI", sans-serif; font-size: 17px; }
+      .label { fill: #ffffff; font-family: "Noto Sans SC", "Microsoft YaHei", "Segoe UI", sans-serif; font-size: 17px; font-weight: 700; }
+      .num { fill: #ffffff; font-family: "Segoe UI", "Noto Sans SC", sans-serif; font-size: 18px; font-weight: 700; }
+    </style>
+    <marker id="arrow-red" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto">
+      <path d="M2 2 L12 7 L2 12 Z" fill="#e7352c"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1000" height="1320"/>
+  <rect class="panel" x="40" y="34" width="920" height="1252" rx="24"/>
+  <text class="title" x="82" y="92">GPIO 输入/输出模式速查</text>
+  <text class="small" x="82" y="130">常见教材会拆成输入四类、输出四类；ESP32 使用时把概念映射到方向、上下拉、开漏和外设复用配置。</text>
+
+  <circle class="brand" cx="96" cy="172" r="16"/>
+  <text class="num" x="91" y="179">I</text>
+  <text class="section" x="124" y="181">输入四类：外部状态进入主控</text>
+
+  <rect class="card" x="80" y="210" width="400" height="230" rx="18"/>
+  <circle class="brand" cx="116" cy="250" r="22"/>
+  <text class="num" x="105" y="257">01</text>
+  <text class="text" x="152" y="258">浮空输入</text>
+  <text class="small" x="116" y="296">没有上拉/下拉，外部电路直接决定电平。</text>
+  <text class="tiny" x="116" y="323">悬空时会被噪声影响，读数可能乱跳。</text>
+  <circle class="brand" cx="152" cy="372" r="7"/>
+  <path class="wire" d="M152 372 H266" marker-end="url(#arrow-red)"/>
+  <rect class="soft" x="270" y="340" width="118" height="64" rx="12"/>
+  <text class="tiny" x="300" y="378">输入缓冲</text>
+  <path class="dash" d="M154 372 C180 320 218 320 242 350"/>
+  <text class="tiny" x="116" y="416">适合外部模块已经稳定驱动的信号。</text>
+
+  <rect class="card" x="520" y="210" width="400" height="230" rx="18"/>
+  <circle class="brand" cx="556" cy="250" r="22"/>
+  <text class="num" x="545" y="257">02</text>
+  <text class="text" x="592" y="258">上拉输入</text>
+  <text class="small" x="556" y="296">引脚通过电阻轻轻拉向 3.3 V。</text>
+  <text class="tiny" x="556" y="323">默认读 1；按键接地时读 0。</text>
+  <text class="tiny" x="606" y="350">3.3 V</text>
+  <path class="line" d="M642 354 V370"/>
+  <path class="line" d="M628 370 h28 m-28 10 h28 m-28 10 h28"/>
+  <path class="line" d="M642 390 V410 H580"/>
+  <circle class="brand" cx="580" cy="410" r="7"/>
+  <path class="wire" d="M580 410 H706" marker-end="url(#arrow-red)"/>
+  <rect class="soft" x="710" y="378" width="118" height="64" rx="12"/>
+  <text class="tiny" x="740" y="416">输入缓冲</text>
+  <path class="line" d="M580 410 V438 H612"/>
+  <path class="line" d="M626 426 l-16 28"/>
+  <path class="line" d="M610 456 h36"/>
+  <text class="tiny" x="556" y="416">入门按键最常用，接线简单可靠。</text>
+
+  <rect class="card" x="80" y="468" width="400" height="230" rx="18"/>
+  <circle class="brand" cx="116" cy="508" r="22"/>
+  <text class="num" x="105" y="515">03</text>
+  <text class="text" x="152" y="516">下拉输入</text>
+  <text class="small" x="116" y="554">引脚通过电阻轻轻拉向 GND。</text>
+  <text class="tiny" x="116" y="581">默认读 0；外部拉高时读 1。</text>
+  <text class="tiny" x="158" y="608">3.3 V</text>
+  <path class="line" d="M204 612 V636 H174"/>
+  <path class="line" d="M158 624 l16 24"/>
+  <circle class="brand" cx="174" cy="656" r="7"/>
+  <path class="wire" d="M174 656 H300" marker-end="url(#arrow-red)"/>
+  <rect class="soft" x="304" y="624" width="118" height="64" rx="12"/>
+  <text class="tiny" x="334" y="662">输入缓冲</text>
+  <path class="line" d="M174 656 H244 V670"/>
+  <path class="line" d="M230 670 h28 m-28 10 h28 m-28 10 h28"/>
+  <path class="thin" d="M224 704 h40 m6 9 h28 m6 9 h16"/>
+  <text class="tiny" x="116" y="674">适合默认需要关断或低电平的信号。</text>
+
+  <rect class="card" x="520" y="468" width="400" height="230" rx="18"/>
+  <circle class="brand" cx="556" cy="508" r="22"/>
+  <text class="num" x="545" y="515">04</text>
+  <text class="text" x="592" y="516">模拟输入</text>
+  <text class="small" x="556" y="554">不走数字 0/1 判断，电压交给 ADC。</text>
+  <text class="tiny" x="556" y="581">用于电位器、电压采样、模拟传感器。</text>
+  <path class="wire" d="M572 644 C600 592 630 592 658 644 S716 696 744 644" marker-end="url(#arrow-red)"/>
+  <rect class="soft" x="752" y="608" width="98" height="74" rx="13"/>
+  <text class="text" x="778" y="655">ADC</text>
+  <path class="dash" d="M586 684 H840"/>
+  <text class="tiny" x="556" y="674">同一物理引脚可能被路由给 ADC 外设。</text>
+
+  <circle class="brand" cx="96" cy="758" r="16"/>
+  <text class="num" x="89" y="765">O</text>
+  <text class="section" x="124" y="767">输出四类：主控信号驱动外设</text>
+
+  <rect class="card" x="80" y="796" width="400" height="230" rx="18"/>
+  <circle class="brand" cx="116" cy="836" r="22"/>
+  <text class="num" x="105" y="843">05</text>
+  <text class="text" x="152" y="844">通用推挽输出</text>
+  <text class="small" x="116" y="882">GPIO 主动拉高，也能主动拉低。</text>
+  <text class="tiny" x="116" y="909">LED、片选、使能脚这类小电流信号常用。</text>
+  <text class="tiny" x="154" y="938">3.3 V</text>
+  <path class="line" d="M226 940 V964"/>
+  <path class="line" d="M208 964 H244"/>
+  <path class="wire" d="M226 964 V990 H330" marker-end="url(#arrow-red)"/>
+  <circle class="brand" cx="226" cy="990" r="7"/>
+  <path class="line" d="M226 990 V1016"/>
+  <path class="line" d="M208 1016 H244"/>
+  <text class="tiny" x="324" y="996">GPIO</text>
+
+  <rect class="card" x="520" y="796" width="400" height="230" rx="18"/>
+  <circle class="brand" cx="556" cy="836" r="22"/>
+  <text class="num" x="545" y="843">06</text>
+  <text class="text" x="592" y="844">通用开漏输出</text>
+  <text class="small" x="556" y="882">GPIO 只主动拉低，不主动拉高。</text>
+  <text class="tiny" x="556" y="909">高电平依赖上拉电阻，适合共享线。</text>
+  <text class="tiny" x="606" y="938">VDD</text>
+  <path class="line" d="M646 940 V956"/>
+  <path class="line" d="M632 956 h28 m-28 10 h28 m-28 10 h28"/>
+  <path class="line" d="M646 976 V996 H774"/>
+  <path class="wire" d="M580 996 H774" marker-end="url(#arrow-red)"/>
+  <circle class="brand" cx="646" cy="996" r="7"/>
+  <path class="line" d="M646 996 V1020"/>
+  <path class="line" d="M628 1020 H664"/>
+  <text class="tiny" x="556" y="1008">写 0 拉低；写 1 时近似“松手”。</text>
+
+  <rect class="card" x="80" y="1054" width="400" height="230" rx="18"/>
+  <circle class="brand" cx="116" cy="1094" r="22"/>
+  <text class="num" x="105" y="1101">07</text>
+  <text class="text" x="152" y="1102">复用推挽输出</text>
+  <text class="small" x="116" y="1140">控制权交给 UART、SPI、LEDC 等外设。</text>
+  <text class="tiny" x="116" y="1167">GPIO Matrix / IO MUX 把波形送到引脚。</text>
+  <rect class="brand-soft" x="126" y="1192" width="118" height="64" rx="12"/>
+  <text class="tiny" x="158" y="1217">LEDC</text>
+  <text class="tiny" x="158" y="1240">UART</text>
+  <path class="wire" d="M244 1224 H306" marker-end="url(#arrow-red)"/>
+  <rect class="soft" x="310" y="1192" width="76" height="64" rx="12"/>
+  <text class="tiny" x="329" y="1230">驱动</text>
+  <path class="wire" d="M386 1224 H430" marker-end="url(#arrow-red)"/>
+  <circle class="brand" cx="430" cy="1224" r="7"/>
+
+  <rect class="card" x="520" y="1054" width="400" height="230" rx="18"/>
+  <circle class="brand" cx="556" cy="1094" r="22"/>
+  <text class="num" x="545" y="1101">08</text>
+  <text class="text" x="592" y="1102">复用开漏输出</text>
+  <text class="small" x="556" y="1140">外设接管引脚，同时保持开漏思想。</text>
+  <text class="tiny" x="556" y="1167">I2C 的 SDA/SCL 是最典型例子。</text>
+  <text class="tiny" x="610" y="1196">VDD</text>
+  <path class="line" d="M650 1198 V1214"/>
+  <path class="line" d="M636 1214 h28 m-28 10 h28 m-28 10 h28"/>
+  <path class="line" d="M650 1234 V1252 H842"/>
+  <path class="wire" d="M574 1252 H842" marker-end="url(#arrow-red)"/>
+  <rect class="brand-soft" x="574" y="1220" width="78" height="58" rx="11"/>
+  <text class="tiny" x="598" y="1255">I2C</text>
+  <circle class="brand" cx="650" cy="1252" r="7"/>
+  <text class="tiny" x="556" y="1274">多个设备只能拉低，松手后由上拉回到高电平。</text>
+</svg>

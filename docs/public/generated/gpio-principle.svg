@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">ESP32-S3 GPIO 原理示意图</title>
+  <desc id="desc">展示程序寄存器、IO MUX、GPIO Matrix、推挽输出、开漏输出、上下拉、输入缓冲和中断检测之间的关系。</desc>
+  <defs>
+    <style>
+      .bg { fill: #f7f8fa; }
+      .panel { fill: #ffffff; stroke: #dfe5ec; stroke-width: 2; }
+      .chip { fill: #20242a; }
+      .soft { fill: #f2f5f8; stroke: #dfe5ec; stroke-width: 2; }
+      .brand { fill: #e7352c; }
+      .brand-soft { fill: #fff1f0; stroke: #e7352c; stroke-width: 2; }
+      .line { fill: none; stroke: #4b5563; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      .wire { fill: none; stroke: #e7352c; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { fill: none; stroke: #8a94a6; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .text { fill: #20242a; font-family: "Noto Sans SC", "Microsoft YaHei", "Segoe UI", sans-serif; font-size: 22px; }
+      .small { fill: #4b5563; font-family: "Noto Sans SC", "Microsoft YaHei", "Segoe UI", sans-serif; font-size: 17px; }
+      .tiny { fill: #4b5563; font-family: "Noto Sans SC", "Microsoft YaHei", "Segoe UI", sans-serif; font-size: 15px; }
+      .label { fill: #ffffff; font-family: "Noto Sans SC", "Microsoft YaHei", "Segoe UI", sans-serif; font-size: 18px; font-weight: 700; }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2 2 L10 6 L2 10 Z" fill="#e7352c"/>
+    </marker>
+    <marker id="arrow-gray" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2 2 L10 6 L2 10 Z" fill="#4b5563"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1200" height="680" rx="0"/>
+  <rect class="panel" x="48" y="42" width="1104" height="596" rx="18"/>
+  <text class="text" x="84" y="92" font-size="32" font-weight="700">GPIO 是“可配置的数字接口”，不是一根裸线</text>
+  <text class="small" x="84" y="126">程序配置方向、上下拉、驱动方式和中断类型；外部电路决定引脚实际电平。</text>
+
+  <rect class="soft" x="82" y="178" width="170" height="96" rx="14"/>
+  <text class="text" x="116" y="218" font-weight="700">程序</text>
+  <text class="small" x="108" y="248">ESP-IDF GPIO API</text>
+
+  <path class="wire" d="M252 226 H324" marker-end="url(#arrow)"/>
+
+  <rect class="chip" x="324" y="152" width="518" height="360" rx="22"/>
+  <text class="label" x="362" y="198">ESP32-S3 GPIO 外设</text>
+
+  <rect class="brand-soft" x="362" y="226" width="164" height="72" rx="12"/>
+  <text class="text" x="389" y="256" font-weight="700">IO MUX</text>
+  <text class="tiny" x="382" y="280">普通 IO / 外设复用</text>
+
+  <rect class="brand-soft" x="362" y="330" width="164" height="72" rx="12"/>
+  <text class="text" x="379" y="360" font-weight="700">GPIO Matrix</text>
+  <text class="tiny" x="389" y="384">信号灵活路由</text>
+
+  <rect class="soft" x="578" y="202" width="214" height="112" rx="14"/>
+  <text class="text" x="620" y="236" font-weight="700">输出驱动</text>
+  <text class="small" x="612" y="265">推挽：拉高或拉低</text>
+  <text class="small" x="612" y="291">开漏：只负责拉低</text>
+
+  <rect class="soft" x="578" y="350" width="214" height="116" rx="14"/>
+  <text class="text" x="620" y="384" font-weight="700">输入路径</text>
+  <text class="small" x="612" y="414">输入缓冲读 0 / 1</text>
+  <text class="small" x="612" y="440">边沿检测触发中断</text>
+
+  <path class="thin" d="M526 262 H578"/>
+  <path class="thin" d="M526 366 H578"/>
+  <path class="thin" d="M685 314 V350"/>
+
+  <circle class="brand" cx="842" cy="332" r="22"/>
+  <text class="label" x="826" y="339">PAD</text>
+  <path class="wire" d="M792 258 C818 258 818 332 842 332"/>
+  <path class="line" d="M842 332 H930"/>
+
+  <rect class="soft" x="930" y="184" width="170" height="112" rx="14"/>
+  <text class="text" x="976" y="218" font-weight="700">LED</text>
+  <text class="small" x="964" y="247">GPIO 输出</text>
+  <path class="line" d="M952 272 h38 l16 -28 l16 56 l16 -28 h38"/>
+  <circle cx="974" cy="248" r="10" fill="#e7352c"/>
+
+  <rect class="soft" x="930" y="364" width="170" height="126" rx="14"/>
+  <text class="text" x="972" y="398" font-weight="700">按键</text>
+  <text class="small" x="956" y="428">输入 + 上拉</text>
+  <path class="line" d="M970 454 h35 m24 0 h34"/>
+  <path class="line" d="M1005 440 l24 28"/>
+  <path class="line" d="M1030 480 v26 h-64"/>
+  <path class="line" d="M966 506 h64"/>
+  <path class="thin" d="M962 506 l10 16 m8 -16 l10 16 m8 -16 l10 16"/>
+
+  <path class="line" d="M930 240 H888 V332"/>
+  <path class="line" d="M930 427 H888 V332"/>
+
+  <rect class="brand-soft" x="106" y="548" width="260" height="58" rx="12"/>
+  <text class="small" x="132" y="583">输出：gpio_set_level() 写 0 / 1</text>
+
+  <rect class="brand-soft" x="414" y="548" width="292" height="58" rx="12"/>
+  <text class="small" x="440" y="583">输入：gpio_get_level() 读 0 / 1</text>
+
+  <rect class="brand-soft" x="754" y="548" width="322" height="58" rx="12"/>
+  <text class="small" x="780" y="573">中断：硬件捕捉边沿</text>
+  <text class="tiny" x="780" y="596">机械按键仍需要软件消抖</text>
+
+  <path class="wire" d="M724 548 C724 520 724 498 724 466" marker-end="url(#arrow)"/>
+  <path class="wire" d="M560 548 C560 514 604 492 646 466" marker-end="url(#arrow)"/>
+  <path class="wire" d="M300 548 C300 482 506 310 578 258" marker-end="url(#arrow)"/>
+</svg>
