@@ -48,10 +48,10 @@ Espressif 文档说明，ESP32-S3 的 GPIO 可以作为通用输入输出，也�
 
 ## 常见输入/输出模式
 
-很多 STM32 资料会把 GPIO 工作方式拆成“输入四类”和“输出四类”：输入看默认电平怎么来，输出看谁负责驱动引脚。ESP32/ESP-IDF 的 API 名称不完全相同，但理解这些模式有助于迁移到不同开发板。
+常见单片机资料会把 GPIO 工作方式拆成“输入四类”和“输出四类”：输入看默认电平怎么来，输出看谁负责驱动引脚。ESP32/ESP-IDF 的 API 名称不完全相同，但理解这些模式有助于迁移到不同开发板。
 
 <figure class="doc-figure">
-  <img :src="withBase('/generated/gpio-io-modes.svg')" alt="GPIO 输入四类和输出四类模式示意图">
+  <img :src="withBase('/generated/gpio-io-modes.png')" alt="GPIO 输入四类和输出四类模式示意图">
   <figcaption>输入模式重点看引脚在没有外部驱动时是否有确定默认电平；输出模式重点看 GPIO 是主动拉高/拉低，还是只拉低并依赖上拉电阻，以及控制权是普通 GPIO 还是 UART、I2C、LEDC 等复用外设。</figcaption>
 </figure>
 
@@ -142,8 +142,6 @@ GPIO 常见场景包括板载 LED、按键、继电器使能、传感器中断�
 - [ESP-IDF GPIO & RTC GPIO 文档](https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32s3/api-reference/peripherals/gpio.html)
 - [ESP32-S3 技术参考手册](https://www.espressif.com/sites/default/files/documentation/esp32-s3_technical_reference_manual_cn.pdf)
 - [ESP32-S3 数据手册](https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_cn.pdf)
-- [ST AN4899：STM32 GPIO 硬件设置与低功耗建议](https://www.st.com/resource/en/application_note/dm00315319-stm32-gpio-configuration-for-hardware-settings-and-lowpower-consumption-stmicroelectronics.pdf)
-- [CSDN：一文带你搞懂有关于 GPIO 的一切](https://blog.csdn.net/joker520522/article/details/142768029)
 
 <div class="prompt-card">
 <strong>本章提示词</strong>
